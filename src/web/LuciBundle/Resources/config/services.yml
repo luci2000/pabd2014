@@ -1,0 +1,7 @@
+parameters:
+#    web_luci.example.class: web\LuciBundle\Example
+
+services:
+#    web_luci.example:
+#        class: %web_luci.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

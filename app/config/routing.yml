@@ -1,3 +1,7 @@
+web_luci:
+    resource: "@webLuciBundle/Resources/config/routing.yml"
+    prefix:   /
+
 sonia_page:
     resource: "@SoniaPageBundle/Resources/config/routing.yml"
     prefix:   /

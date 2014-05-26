@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+
+        <title>Proiect Lazea Lucian</title>
+
+        <!-- Our CSS stylesheet file -->
+        <link rel="stylesheet" href="{{ asset('bundles/webluci/css/styles.css') }}" />
+
+        <!-- Including the Lobster font from Google's Font Directory -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lobster" />
+
+        <!-- Enabling HTML5 support for Internet Explorer -->
+        <!--[if lt IE 9]>
+          <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+
+        <header>
+            <h1>Pagina Personala Lazea Lucian</h1>
+        </header>
+
+        <nav>
+            <ul class="fancyNav">
+                <li id="home"><a href="/app_dev.php/luci/home" class="homeIcon">Acasa</a></li>
+                <li id="news"><a href="/app_dev.php/luci/news">Stiri</a></li>
+                <li id="about"><a href="/app_dev.php/luci/about">Despre</a></li>
+                <li id="services"><a href="/app_dev.php/luci/services">Servicii</a></li>
+                <li id="contact"><a href="/app_dev.php/luci/contact">Contact</a></li>
+            </ul>
+        </nav>
+	{% if action=="home" %}
+	<div id='continut'>
+          <ul class="main-list">
+          <p>Aceasta este pagina implicita, facuta pentru proiect.</p>
+          <p>Va multumesc pentru vizita!</p>
+           </ul>
+        </div>
+
+        {% elseif action=="news" %}
+        <div id='continut'>
+          <ul class="main-list">
+            <li>Pagina News<strong> stiri</strong></li>
+            <li>Ultimele stiri doar aici</li>
+          </ul>
+        </div>
+
+
+	{% elseif action=="about" %}
+        <div id='continut'>
+          <ul class="main-list">
+            <li>Despre <strong>mine</strong></li>
+            <li>Nume<strong> Lazea Lucian</strong> </li>
+            <li>Studii Actuale: <strong>Uniiversitatea 1 Decembrie 1918 PABD</strong></li>
+          </ul>
+        </div>
+
+	{% elseif action=="services" %}
+	<div id='continut'>
+          <ul class="main-list">
+            <li>Servicii <strong>Web Design, Web Developer</strong></li>
+            <li>Dezvoltare in <strong>Html, Php, Ajax, jQuerry, Javascript</strong> </li>
+            <li>Adresa: <strong>Alba Iulia</strong></li>
+          </ul>
+	</div>
+        {% elseif action=="contact" %}
+        <div id='continut'>
+          <ul class="main-list">
+            <li>Email: <strong>luciii2000@com</strong></li>
+            <li>Telefon: <strong>0756 46 97 34</strong> </li>
+            <li>Adresa: <strong>Alba Iulia</strong></li>
+          </ul>
+        </div>
+	{% endif %}
+        <footer>Copyright Lazea Lucian.</footer>
+
+    </body>
+</html>
+

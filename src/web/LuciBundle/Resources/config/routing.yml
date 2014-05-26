@@ -1,0 +1,10 @@
+web_luci_homepage:
+    pattern:  /luci
+    defaults: { _controller: webLuciBundle:Default:index }
+web_luci_homepage:
+    pattern:  /luci/
+    defaults: { _controller: webLuciBundle:Default:index }
+web_luci_homepage:
+    pattern:  /luci/{action}
+    defaults: { _controller: webLuciBundle:Default:index }
+
